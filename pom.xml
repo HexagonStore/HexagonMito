@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.hexagonstore.mito</groupId>
+    <artifactId>HexagonMito</artifactId>
+    <version>1.0.0-ALPHA</version>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>codemc-repo</id>
+            <url>https://repo.codemc.io/repository/maven-public/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>net.citizensnpcs</groupId>
+            <artifactId>Citizens</artifactId>
+            <version>2.0.24-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>D:/Bukkit APIs Or Plugins/Citizens.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>org.bukkit</groupId>
+            <artifactId>craftbukkit</artifactId>
+            <version>1.8.8-R0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>D:/Bukkit APIs Or Plugins/craftbukkit-1.8.8.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>net.minecraft.server</groupId>
+            <artifactId>minecraft-server-1.9.4</artifactId>
+            <version>1.9.4-R0.2-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>D:/Bukkit APIs Or Plugins/craftbukkit-1.9.4.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>net.minecraft.server</groupId>
+            <artifactId>minecraft-server-1.10.2</artifactId>
+            <version>1.10.2-R0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>D:/Bukkit APIs Or Plugins/craftbukkit-1.10.2.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>net.minecraft.server</groupId>
+            <artifactId>minecraft-server-1.11.2</artifactId>
+            <version>1.11.2-R0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>D:/Bukkit APIs Or Plugins/craftbukkit-1.11.2.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>net.minecraft.server</groupId>
+            <artifactId>minecraft-server-1.12.2</artifactId>
+            <version>1.12.2-R0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>D:/Bukkit APIs Or Plugins/craftbukkit-1.12.2.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>net.minecraft.server</groupId>
+            <artifactId>minecraft-server-1.13.2</artifactId>
+            <version>1.13.2-R0.2-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>D:/Bukkit APIs Or Plugins/craftbukkit-1.13.2.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>net.minecraft.server</groupId>
+            <artifactId>minecraft-server-1.14.4</artifactId>
+            <version>1.14.4-R0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>D:/Bukkit APIs Or Plugins/craftbukkit-1.14.4.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>net.minecraft.server</groupId>
+            <artifactId>minecraft-server-1.15.2</artifactId>
+            <version>1.15.2-R0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>D:/Bukkit APIs Or Plugins/craftbukkit-1.15.2.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>net.minecraft.server</groupId>
+            <artifactId>minecraft-server-1.16.5</artifactId>
+            <version>1.16.5-R0.3-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>D:/Bukkit APIs Or Plugins/craftbukkit-1.16.5.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.gmail.filoghost.holographicdisplays</groupId>
+            <artifactId>holographicdisplays-api</artifactId>
+            <version>2.4.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.14</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ystoreplugins.yx1.api</groupId>
+            <artifactId>yX1</artifactId>
+            <version>2.0.6</version>
+            <scope>system</scope>
+            <systemPath>D:/Bukkit APIs Or Plugins/yX1-2.0.6.jar</systemPath>
+        </dependency>
+    </dependencies>
+</project>

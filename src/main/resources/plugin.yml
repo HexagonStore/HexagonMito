@@ -1,0 +1,9 @@
+name: HexagonMito
+version: 1.0.0-ALPHA
+main: com.hexagonstore.mito.MitoPlugin
+author: sailez_
+softdepend: [HolographicDisplays, Citizens, yX1]
+website: https://dsc.gg/hexagonstore
+description: Plugin de mito simples com NPCs.
+commands:
+  mito:

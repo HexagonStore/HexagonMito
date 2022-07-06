@@ -1,0 +1,86 @@
+Mito:
+  atual: 'nulo' #Nick do atual mito;
+  local: 'nulo' #Local do npc;
+  lastPlayed: 0 #Não mexa;
+  negacoes: 0 #Quantidade de negaçoes de x1 do mito.
+
+NPC:
+  hologram-distance: 2.8
+  hologram:
+    - '&5&lMITO'
+    - '&fO mito atual é o(a): &e{mito}.'
+  sem mito:
+    hologram-distance: 3.1
+    hologram:
+      - '&4&lMITO'
+      - '&cNão há ninguém no posto de mito do servidor.'
+      - '&cQue tal você ocupar esse posto?'
+    skin: 'Resucitado'
+
+cmd permission:
+  mito: 'mito.cmd' #Deixe vázio caso não queira nenhuma permissão.
+  setmito: 'mito.set.cmd'
+  setnpc: 'mito.setnpc.cmd'
+  removenpc: 'mito.removenpc.cmd'
+  unsetmito: 'mito.unset.cmd'
+
+tempo mito join: 24 #Defina a quantidade de horas que o mito tem para entrar, se não ele perde a tag e é setado para alguém aleatório do servidor.
+quantidade negar: 3 #Defina a quantidade de negações no x1 para o mito perder a tag, e ser setado para alguém aleatório do servidor.
+
+destaque: #Placeholders: {mito} - Novo mito, {old_mito} - Mito antigo.
+  title:
+    ativar: true
+    line:
+      1: "&5&lNOVO MITO" #Titulo;
+      2: "&fO mito foi conquistado por: &e{mito}." #Subtitulo;
+    fadeIn: 20 #Em ticks (20 = 1 segundo);
+    stay: 40 #Em ticks (20 = 1 segundo); A opção 'stay' é a duração do title na tela do jogador.
+    fadeOut: 20 #Em ticks (20 = 1 segundo);
+  actionbar:
+    ativar: true
+    message: "&fNOVO MITO &8-> &e{mito}"
+    duration: 2 #Em segundos; A opção 'duration' é a duração do actionbar na hotbar do jogador.
+  message:
+    ativar: true
+    text:
+      - ''
+      - '     &a&lNOVO MITO     '
+      - ''
+      - ' &fO guerreiro &e{mito} &fconquistou o posto de mito!'
+      - ' &fConsegue tirar o posto dele? &dApenas na prática para descobrir.'
+      - ''
+  join:
+    ativar: true
+    message: '&a[MITO] &fO mito &e{player} &fentrou no servidor.'
+  quit:
+    ativar: true
+    message: '&4[MITO] &fO mito &e{player} &fsaiu no servidor.'
+  sound:
+    ativar: true
+    som: LEVEL_UP #Exemplos de sons na 1.8: https://helpch.at/docs/1.8.8/index.html?org/bukkit/Sound.html
+    all: true #false = Apenas o jogador que conquistou o mito ouvirá o som; true = Todos ouvirão o som.
+
+Messages:
+  no_console: '&cComando desativado via Console.'
+  no_permission: '&cVocê não tem permissão suficiente.'
+  no_has_mito: '&cAinda não tem nenhum mito no servidor.'
+  mito: '&aO mito atual é o(a) jogador(a): &f{mito}.'
+  not_has_mito: '&cAtualmente não tem nenhum mito.'
+  no_args:
+    setmito: '&cUtilize: /mito set <random/player>.'
+  player_not_exists: '&cJogador inexistente.'
+  already_mito: '&cEste jogador já é o mito do servidor.'
+  impossible_random: '&cNão é possível setar o mito para alguém aleatório pois não há ninguém no servidor.'
+  setmito: '&eVocê alterou o mito com sucesso! Novo mito: &f{player}.'
+  unsetnpc: '&cNPC deletado com sucesso!'
+  setnpc: '&aLocal do NPC setado com sucesso!'
+  unsetmito: '&eMito resetado com sucesso.'
+  random_setmito: '&aUm mito aleatório foi escolhido! Novo mito: &f{player}.'
+  not_spawned: '&cO NPC ainda não foi setado! Digite: /mito setnpc para setar o local de spawn do NPC.'
+  negar:
+    - ''
+    - '     &d&lMITO DO PVP     '
+    - ''
+    - ' &fO ex-mito &e{mito} &frecusou o x1 &e{quantidade) &fvez(es).'
+    - ' &fComo consequência ele perderá a tag mito, e ela será sorteada!'
+    - ''
