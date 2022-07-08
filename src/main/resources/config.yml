@@ -1,3 +1,8 @@
+Plugin de chat: '' #Disponíveis: LegendChat, nChat, OpeNChat, UltimateChat, UChat; Caso não queira nenhum, deixe vázio.
+Tag mito: '&5[MITO]' #Tag mito do chat.
+
+key mito: "mito" #Chave no chat para retornar a tag mito; Caso não saiba o que está fazendo, NÃO MEXA!
+
 Mito:
   atual: 'nulo' #Nick do atual mito;
   local: 'nulo' #Local do npc;

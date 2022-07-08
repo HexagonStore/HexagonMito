@@ -1,10 +1,7 @@
 package com.hexagonstore.mito;
 
 import com.hexagonstore.mito.commands.MitoCommand;
-import com.hexagonstore.mito.events.DeathEvent;
-import com.hexagonstore.mito.events.JoinEvent;
-import com.hexagonstore.mito.events.NegarEvent;
-import com.hexagonstore.mito.events.QuitEvent;
+import com.hexagonstore.mito.events.*;
 import com.hexagonstore.mito.manager.NPCManager;
 import com.hexagonstore.mito.npc.NPCSpawner;
 import com.hexagonstore.mito.task.MitoJoinTask;
@@ -54,6 +51,8 @@ public class MitoPlugin extends JavaPlugin {
 
         if(config.getLong("Mito.lastPlayed") > 0) MitoJoinTask.runMitoJoin();
 
+        hookChat();
+
         getLogger().info("Plugin habilitado com sucesso.");
     }
 
@@ -64,6 +63,30 @@ public class MitoPlugin extends JavaPlugin {
             config.saveConfig();
         }
         getLogger().info("Plugin desabilitado com sucesso.");
+    }
+
+    private void hookChat() {
+        String chatPlugin = config.getString("Plugin de chat");
+        switch (chatPlugin.toLowerCase()) {
+            case "ultimatechat":
+            case "uchat":
+                if (getServer().getPluginManager().getPlugin("UltimateChat") != null) {
+                    getLogger().info("UltimateChat detectado, hookando...");
+                    new UltimateChatEvent(this, manager, config);
+                } else getLogger().info("UltimateChat não está habilitado, o hook não irá ocorrer!");
+                break;
+            case "openchat":
+            case "legendchat":
+            case "nchat":
+                if (getServer().getPluginManager().getPlugin("Legendchat") != null) {
+                    getLogger().info("LegendChat/OpeNChat/nChat detectado, hookando...");
+                    new LegendChatEvent(this, manager, config);
+                } else getLogger().info("LegendChat/OpeNChat/nChat não está habilitado, o hook não irá ocorrer!");
+                break;
+            default:
+                getLogger().info("Nenhum plugin de chat detectado.");
+                break;
+        }
     }
 
     public NMSUtils getNMSUtils() {
